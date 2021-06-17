@@ -75,8 +75,21 @@ DATA = [
 def run():
 
     all_python_devs = [devs['name'] for devs in DATA if devs['language'] == 'python']
+    all_platzi_workers = [ platzi_workers['name'] for platzi_workers in DATA if platzi_workers['organization'] == 'Platzi']
+    adults = list(filter(lambda devs: devs['age'] > 18, DATA))
+    adults = list(map(lambda devs: devs['name'] ,adults))
+    old_people = list(map(lambda devs: devs | {'old': devs['age']>70}, DATA))
+    print(all_python_devs, all_platzi_workers, adults)
 
-    print(all_python_devs)
+    print("""
+    
+    
+    
+    
+    
+    """)
+
+    print(old_people)
 
 
 if __name__ == '__main__':

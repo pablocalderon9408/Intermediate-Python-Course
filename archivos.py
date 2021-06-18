@@ -5,16 +5,12 @@ def read():
             numbers.append(int(line))
     print(numbers)
 
-
 def write():
     names = ["pablo", "milo", "lexis", "nore"]
     with open("./archivos/names.txt","w",encoding="utf-8") as f:
         for name in names:
             f.write(name)
             f.write("\n")
-
-
-
 
 def run():
     pass
